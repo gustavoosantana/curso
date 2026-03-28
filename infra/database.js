@@ -7,9 +7,11 @@ async function query(queryObject) {
     user: process.env.POSTGRES_USER,
     database: process.env.POSTGRES_DB,
     password: process.env.POSTGRES_PASSWORD,
+    ssl: true,
   });
-  await client.connect();
+
   try {
+    await client.connect();
     const result = await client.query(queryObject);
     return result; // O valor é retornado aqui
   } catch (error) {
