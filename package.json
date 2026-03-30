@@ -13,7 +13,8 @@
     "test": "jest",
     "test:watch": "jest --watchAll",
     "migrate:create": "node-pg-migrate -m infra/migrations create",
-    "migrate:up": "node-pg-migrate -m infra/migrations --envPath .env.development up"
+    "migrate:up": "node-pg-migrate -m infra/migrations --envPath .env.development up",
+    "migrate:down": "node-pg-migrate -m infra/migrations --envPath .env.development down"
   },
   "author": "",
   "license": "MIT",
